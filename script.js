@@ -155,3 +155,18 @@ function copyToClipboard(id) {
     showConfirmButton: false
   });
 }
+
+function toggleMenu() {
+  const menu = document.getElementById('dropdown-menu');
+  menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+}
+
+document.addEventListener('click', function (event) {
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('dropdown-menu');
+
+  if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+    menu.style.display = 'none';
+  }
+});
+
