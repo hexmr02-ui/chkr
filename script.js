@@ -158,7 +158,7 @@ function copyToClipboard(id) {
 
 function toggleMenu() {
   const menu = document.getElementById('dropdown-menu');
-  menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+  menu.classList.toggle('show');
 }
 
 document.addEventListener('click', function (event) {
@@ -166,7 +166,6 @@ document.addEventListener('click', function (event) {
   const menu = document.getElementById('dropdown-menu');
 
   if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-    menu.style.display = 'none';
+    menu.classList.remove('show');
   }
 });
-
