@@ -1,3 +1,4 @@
+/* Color Variables (Theme from your previous input) */
 :root {
   --dark-blue: #1a2035;
   --medium-blue: #232a41;
@@ -394,27 +395,45 @@ body {
 
 /* Footer Styling */
 .main-footer {
-  text-align: center;
-  margin-top: 30px;
-  padding: 20px;
-  background-color: var(--medium-blue);
-  border-top: 2px solid var(--light-blue);
-  color: var(--text-color-light);
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--medium-blue);
+    border-top: 2px solid var(--light-blue);
+    color: var(--text-color-light);
 }
 
 .main-footer p {
-  margin: 0;
-  font-size: 14px;
+    margin: 0;
+    font-size: 14px;
 }
 
 .main-footer a {
-  color: var(--green);
-  text-decoration: none;
-  font-weight: bold;
+    color: var(--green);
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .main-footer a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: var(--text-color-light);
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--green);
 }
 
 /* Colors for live/dead/unknown (if still used internally for counts) */
