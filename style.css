@@ -64,37 +64,78 @@ body {
   color: var(--text-color-light);
 }
 
-.header-buttons {
-  display: flex;
-  gap: 10px;
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
-.btn {
+.menu-container {
+  position: relative;
   display: inline-block;
-  padding: 8px 15px;
-  border-radius: 5px;
+  z-index: 999;
+}
+
+.menu-toggle {
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+  padding: 8px 12px;
+  transition: background 0.3s;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  min-width: 220px;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 16px;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-  transition: all 0.3s ease;
+  color: #333;
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
 }
 
-.checker-top-btn {
-  background-color: #05f505;
-  color: var(#0047ab);
+.dropdown-menu li a:hover {
+  background-color: #f5f5f5;
 }
 
-.checker-top-btn:hover {
-  background-color: #3e8e41;
+.dropdown-menu li:last-child a {
+  border-bottom: none;
 }
 
-.faker-checker-btn {
-  background-color: #05f505;
-  color: var(#0047ab);
+.info-card {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 16px 24px;
+  background-color: #f8f9fa; /* হালকা ছায়া */
+  border-left: 5px solid #0d6efd; /* নীল বর্ডার */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
 }
-
-.faker-checker-btn:hover {
-  background-color: #3e8e41;
+.info-card strong {
+  color: #0d6efd;
+}
+.info-card em {
+  color: #dc3545;
+}
+.info-card u {
+  text-decoration-color: #ffc107;
 }
 
 
@@ -390,44 +431,18 @@ body {
 
 @media (max-width: 600px) {
   .top-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    flex-direction: row;  
+    justify-content: space-between; 
+    align-items: center;
   }
-  .header-buttons {
-    width: 100%;
-    justify-content: center;
-  }
-  .btn {
-    flex: 1;
-    text-align: center;
+    .top-header h1 {
+    font-size: 20px;
   }
 
   .container {
     padding: 15px;
   }
 }
-
-.info-card {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 16px 24px;
-  background-color: #f8f9fa; /* হালকা ছায়া */
-  border-left: 5px solid #0d6efd; /* নীল বর্ডার */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  text-align: center;
-  font-family: 'Rubik', sans-serif;
-}
-.info-card strong {
-  color: #0d6efd;
-}
-.info-card em {
-  color: #dc3545;
-}
-.info-card u {
-  text-decoration-color: #ffc107;
-}
+  .menu-toggle {
+    margin-left: 10px;
+  }
