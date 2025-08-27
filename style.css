@@ -140,7 +140,7 @@ body {
   box-sizing: border-box;
   width: calc(100% - 40px); /* দুই পাশে ২০px ফাঁকা রাখবে */
   margin: 12px;
-  padding: 16px 24px;
+  padding: 1px 24px;
   background-color: #f8f9fa;
   border-left: 5px solid #0021F3;
   border-right: 5px solid #ff0000;
